@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 /// Flutter code sample for BottomNavigationBar
 
 // This example shows a [BottomNavigationBar] as it is used within a [Scaffold]
@@ -13,8 +15,11 @@ import 'package:flutter/material.dart';
 import 'package:first_flutter_app/screens/Home.dart';
 import 'package:first_flutter_app/screens/MyCart.dart';
 import 'package:first_flutter_app/screens/MyProfile.dart';
+import 'models/image_model.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 /// This is the main application widget.
 class MyApp extends StatelessWidget {
@@ -47,10 +52,22 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
 
   @override
   Widget build(BuildContext context) {
+    List<ImageModel> images = [];
+    var jsonData =
+        '[{ "id" : "Dane", "url" : "FilledStacks" ,"title":"abc" },{ "id" : "Dane", "url" : "Himanshu" ,"title":"abc" }]';
+
+    var parsedJson = json.decode(jsonData);
+
+    for (int i = 0; i < 2; i++) {
+      var imageModel = ImageModel.fromJson(parsedJson[i]);
+      images.add(imageModel);
+    }
+
+    print('${parsedJson.runtimeType} : $parsedJson');
     Widget child;
     switch (_selectedIndex) {
       case 0:
-        child = MyHome();
+        child = MyHome(images);
         break;
       case 1:
         child = MyCart();

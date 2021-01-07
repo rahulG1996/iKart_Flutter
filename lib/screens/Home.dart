@@ -1,7 +1,11 @@
+import 'package:first_flutter_app/models/image_model.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
 class MyHome extends StatelessWidget {
+  final List<ImageModel> images;
+
+  MyHome(this.images);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,7 +44,7 @@ class MyHome extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            "All Categoryies",
+                            "Available",
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           Row(
@@ -209,312 +213,19 @@ class MyHome extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.symmetric(
-                vertical: 20.0,
-              ),
-              height: 200.0,
-              child: ListView(
-                scrollDirection: Axis.horizontal,
-                children: <Widget>[
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey[200],
-                            blurRadius: 10.0, // soften the shadow
-                            spreadRadius: 1.0, //extend the shadow
-                            offset: Offset(
-                              5.0, // Move to right 10  horizontally
-                              5.0, // Move to bottom 5 Vertically
-                            ),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(
-                            10) // use instead of BorderRadius.all(Radius.circular(20))
-                        ),
-                    width: 150.0,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0),
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  color: Colors.grey[300],
-                                  child: Text('100g')),
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  child: Icon(
-                                    Icons.add_circle_outline,
-                                    color: Colors.grey,
-                                  ))
-                            ]),
-                        Image.asset(
-                          'assets/images/mango.png',
-                          height: 120,
-                          width: 150,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Mangoes",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 5.0),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text(
-                                  "RS. 120",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  "20% OFF",
-                                  style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey[200],
-                            blurRadius: 10.0, // soften the shadow
-                            spreadRadius: 1.0, //extend the shadow
-                            offset: Offset(
-                              5.0, // Move to right 10  horizontally
-                              5.0, // Move to bottom 5 Vertically
-                            ),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(
-                            10) // use instead of BorderRadius.all(Radius.circular(20))
-                        ),
-                    width: 150.0,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0),
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  color: Colors.grey[300],
-                                  child: Text('100g')),
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  child: Icon(
-                                    Icons.add_circle_outline,
-                                    color: Colors.grey,
-                                  ))
-                            ]),
-                        Image.asset(
-                          'assets/images/grapes.png',
-                          height: 120,
-                          width: 150,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Mangoes",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 5.0),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text(
-                                  "RS. 120",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  "20% OFF",
-                                  style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey[200],
-                            blurRadius: 10.0, // soften the shadow
-                            spreadRadius: 1.0, //extend the shadow
-                            offset: Offset(
-                              5.0, // Move to right 10  horizontally
-                              5.0, // Move to bottom 5 Vertically
-                            ),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(
-                            10) // use instead of BorderRadius.all(Radius.circular(20))
-                        ),
-                    width: 150.0,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0),
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  color: Colors.grey[300],
-                                  child: Text('100g')),
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  child: Icon(
-                                    Icons.add_circle_outline,
-                                    color: Colors.grey,
-                                  ))
-                            ]),
-                        Image.asset(
-                          'assets/images/ginger.png',
-                          height: 120,
-                          width: 150,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Mangoes",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 5.0),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text(
-                                  "RS. 120",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  "20% OFF",
-                                  style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  Container(
-                    decoration: BoxDecoration(
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey[200],
-                            blurRadius: 10.0, // soften the shadow
-                            spreadRadius: 1.0, //extend the shadow
-                            offset: Offset(
-                              5.0, // Move to right 10  horizontally
-                              5.0, // Move to bottom 5 Vertically
-                            ),
-                          )
-                        ],
-                        borderRadius: BorderRadius.circular(
-                            10) // use instead of BorderRadius.all(Radius.circular(20))
-                        ),
-                    width: 150.0,
-                    margin: EdgeInsets.symmetric(horizontal: 10.0),
-                    padding: EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: <Widget>[
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  color: Colors.grey[300],
-                                  child: Text('100g')),
-                              Container(
-                                  margin: EdgeInsets.symmetric(vertical: 5.0),
-                                  child: Icon(
-                                    Icons.add_circle_outline,
-                                    color: Colors.grey,
-                                  ))
-                            ]),
-                        Image.asset(
-                          'assets/images/kiwi.png',
-                          height: 120,
-                          width: 150,
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              "Mangoes",
-                              style: TextStyle(
-                                color: Colors.grey,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            SizedBox(height: 5.0),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: <Widget>[
-                                Text(
-                                  "RS. 120",
-                                  style: TextStyle(fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  "20% OFF",
-                                  style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.grey),
-                                )
-                              ],
-                            )
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+                margin: EdgeInsets.symmetric(
+                  vertical: 20.0,
+                ),
+                height: 200.0,
+                child: ListView.builder(
+                    padding: const EdgeInsets.all(8),
+                    itemCount: images.length,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Container(
+                        height: 50,
+                        child: Row(children: <Widget>[Text(images[index].url)]),
+                      );
+                    })),
             Container(
               padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 10.0),
               child: Row(
